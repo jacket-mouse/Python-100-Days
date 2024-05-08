@@ -13,6 +13,38 @@ Date: 2018-03-02
 """
 from random import randint
 
+guest_init = 0
+host_init = 0
+round = 1000000
+
+import time
+from tqdm import tqdm
+
+
+# 模拟一个需要进行迭代的任务，例如处理数据或训练模型
+def process_data(guest, host, num_items):
+    for i in tqdm(range(num_items), desc="Processing"):
+        first = randint(1, 6) + randint(1, 6)
+        if first == 7 or first == 11:
+            guest += 1
+        elif first == 2 or first == 3 or first == 12:
+            host += 1
+        else:
+            while True:
+                current = randint(1, 6) + randint(1, 6)
+                if current == 7:
+                    host += 1
+                    break
+                elif current == first:
+                    guest += 1
+                    break
+    print("玩家赢的概率为：%.2f" % (guest / round))
+    print("庄家赢的概率为：%.2f" % (host / round))
+
+
+# 调用处理数据的函数并显示进度条
+process_data(guest_init, host_init, round)
+
 money = 1000
 while money > 0:
     print('你的总资产为:', money)
