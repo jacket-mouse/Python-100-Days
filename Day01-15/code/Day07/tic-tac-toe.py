@@ -9,7 +9,6 @@ Date: 2018-03-06
 import os
 
 
-
 def print_board(board):
     print(board['TL'] + '|' + board['TM'] + '|' + board['TR'])
     print('-+-+-')
