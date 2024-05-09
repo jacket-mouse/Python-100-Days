@@ -29,6 +29,11 @@ def main():
     print()
     # 将元组转换成集合
     set3 = set((1, 2, 3, 3, 2, 1))
+    set4 = set((1, 2, 3))
+    print(set4)
+    print(set4.pop())
+    print(set4)
+    print(set3)
     print(set3.pop())
     print(set3)
 

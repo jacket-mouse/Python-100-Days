@@ -11,6 +11,10 @@ def main():
     print(s1, s2, end='')
     str2 = 'abc123456'
     print(str2[-3:-1])  # 45
+    print(str2.center(50, '*'))
+    list1 = [1, 3, 5, 7, 100]
+    for index, elem in enumerate(list1):
+        print(index, elem)
 
 
 

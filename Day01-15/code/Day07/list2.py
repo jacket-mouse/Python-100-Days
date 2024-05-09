@@ -31,6 +31,9 @@ def main():
     print(fruits4)
     fruits5 = fruits[::-1]
     print(fruits5)
+    print(fruits.sort(reverse=True))
+    print(fruits.sort())
+    print(fruits)
 
 
 if __name__ == '__main__':

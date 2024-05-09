@@ -8,7 +8,7 @@ Version: 0.1
 Author: 骆昊
 Date: 2018-03-06
 """
-
+import sys
 
 # 生成Fibonacci序列的生成器
 def fib(n):
@@ -28,6 +28,7 @@ def main():
     list3 = [m + n for m in 'ABCDEFG' for n in '12345']
     print(list3)
     print(len(list3))
+    print(sys.getsizeof(list3))
     # 生成器(节省空间但生成下一个元素时需要花费时间)
     gen = (m + n for m in 'ABCDEFG' for n in '12345')
     print(gen)
